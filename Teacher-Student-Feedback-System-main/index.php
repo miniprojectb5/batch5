@@ -77,7 +77,7 @@ if(!empty($_POST))
 <br>
 
 <center>
-<span class="SubHead" style="font-weight:100;">Student Feedback <a href="feedback.php" class="link">Click Here</a></span>
+<button class="SubHead" style="font-weight:100;"><a href="feedback.php" class="link">Student Feedback</a></button>
 
 </center>
 </body>
