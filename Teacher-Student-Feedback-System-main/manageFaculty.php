@@ -1,32 +1,3 @@
-<?php
-include("configASL.php");
-session_start();
-if(!isset($_SESSION['aid']))
-{
-	header("location:index.php");
-}
-$aid=$_SESSION['aid'];
-$x=mysqli_query($al,"select * from admin where aid='$aid'");
-$y=mysqli_fetch_array($x);
-$name=$y['name'];
-
-if(!empty($_POST))
-{
-	$fc=$_POST['fc'];
-	$sub=$_POST['sub'];
-	$subb=$_POST['subb'];
-	$faculty_id = uniqid();
-	$u=mysqli_query($al,"insert into faculty(faculty_id,name,s1,s2) values('$faculty_id','$fc','$sub','$subb')");
-	if($u==true)
-	{
-		?>
-        <script type="application/javascript">
-		alert('Successfully added');
-		</script>
-        <?php }
-}
-		
-?>
 <!doctype html>
 <html>
 <head>
@@ -70,7 +41,7 @@ CMC B5 PROJECT<br />
         </div>
     </div>      
     </div>
-</div>
+
 		
         <div class="tdd">
         	<input type="submit" value="ADD FACULTY" />
